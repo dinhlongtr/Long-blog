@@ -2,9 +2,9 @@ import { defineAstroPaperConfig } from "./src/types/config";
 
 export default defineAstroPaperConfig({
   site: {
-    url: "https://astro-paper.pages.dev/",
-    title: "AstroPaper",
-    description: "A minimal, responsive and SEO-friendly Astro blog theme.",
+    url: "https://trandinhlong.id.vn/",
+    title: "Trần Đình Long",
+    description: "Đây là trang chuyên về mật thư",
     author: "Trần Đình Long",
     profile: "https://github.com/dinhlongtr/",
     ogImage: "default-og.jpg",
