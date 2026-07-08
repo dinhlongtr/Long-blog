@@ -40,11 +40,10 @@ export default function LetterLayout({ children, frontmatter }) {
         <div style={{ position: 'relative', width: '300px', marginTop: '50px', color: '#000000' }}>
           <div style={{ fontSize: '15px', marginBottom: '5px', paddingLeft: '35px' }}>Kind Regards,</div>
           <div style={{ position: 'relative', height: '130px' }}>
-            <img src="../assets/ck.png" alt="Chữ ký" style={{ position: 'absolute', left: '45px', top: '25px', width: '150px', height: 'auto', zIndex: 1, pointerEvents: 'none' }} />
-            <img src="../content/posts/cd1.png" alt="Con dấu" style={{ position: 'absolute', left: '10px', top: '5px', width: '125px', height: 'auto', zIndex: 2, pointerEvents: 'none' }} />
+           <img src="../content/posts/cd1.png" alt="Con dấu" style={{ position: 'absolute', left: '10px', top: '5px', width: '125px', height: 'auto', zIndex: 2, pointerEvents: 'none' }} />
           </div>
           <div style={{ fontWeight: 'bold', fontSize: '15px', marginTop: '5px', paddingLeft: '35px' }}>
-            Trần Định Long
+            Trần Đình Long
           </div>
         </div>
 
