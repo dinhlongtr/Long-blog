@@ -46,11 +46,11 @@ const ott = frontmatter?.ott || "";
       </div>
     </div>
 
-    {/* Khối chữ ký và con dấu chồng lên nhau */}
+    {/* Khối chữ ký và con dấu SIÊU TO */}
     <div class="letter-signature-block">
       <div class="letter-kind-regards">Kind Regards,</div>
       <div class="letter-images-stack">
-        {/* Chỉ hiển thị duy nhất ảnh con dấu, không dùng ảnh chữ ký nữa */}
+        {/* Chỉ hiển thị duy nhất ảnh con dấu đã phóng to */}
         <Image src={conDauImg} alt="Con dấu" class="letter-img-cd" />
       </div>
       <div class="letter-signer-name">
@@ -133,9 +133,10 @@ const ott = frontmatter?.ott || "";
     color: #000000 !important;
   }
 
+  /* Khu vực chữ ký được nới rộng */
   .letter-signature-block {
     position: relative;
-    width: 300px;
+    width: 350px; /* Tăng chiều rộng khối nhận diện */
     margin-top: 50px;
     color: #000000 !important;
   }
@@ -147,17 +148,18 @@ const ott = frontmatter?.ott || "";
     color: #000000 !important;
   }
 
+  /* Tăng chiều cao vùng chứa ảnh lên 170px để dấu to không bị đè chữ dưới */
   .letter-images-stack {
     position: relative;
-    height: 130px;
+    height: 170px;
   }
 
-  /* Định vị ảnh con dấu đứng độc lập */
+  /* THAY ĐỔI: Kích thước con dấu được đẩy lên 185px (To, sắc nét) */
   .letter-img-cd {
     position: absolute !important;
-    left: 20px !important;
+    left: 15px !important;
     top: 5px !important;
-    width: 125px !important;
+    width: 185px !important; 
     height: auto !important;
     z-index: 2 !important;
     pointer-events: none;
