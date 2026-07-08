@@ -1,5 +1,4 @@
-export default function LetterLayout({ children, frontmatter }) {
-  // Đảm bảo dữ liệu không bị lỗi nếu frontmatter trống
+export const Layout = ({ children, frontmatter }) => {
   const date = frontmatter?.date || "9th July 2026";
   const ott = frontmatter?.ott || "";
 
