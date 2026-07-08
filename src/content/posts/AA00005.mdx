@@ -12,7 +12,6 @@ description: Bạn có thể dùng mọi cách để giải
 export const PostLayout = ({ children, ott, date = "9th July 2026" }) => (
   <div style={{ fontFamily: 'Arial, sans-serif', maxWidth: '750px', margin: '0 auto', padding: '40px 20px', color: '#000', lineHeight: '1.6', backgroundColor: '#fff' }}>
     
-    {/* Thanh thông tin liên hệ phía trên bên phải */}
     <div style={{ textAlign: 'right', marginBottom: '50px', fontSize: '14px' }}>
       <div style={{ marginBottom: '8px', display: 'inline-block', width: '100%' }}>
         <span style={{ verticalAlign: 'middle' }}>+84 944928372</span>
@@ -28,37 +27,29 @@ export const PostLayout = ({ children, ott, date = "9th July 2026" }) => (
       </div>
     </div>
 
-    {/* Ngày tháng */}
     <div style={{ marginBottom: '35px', fontWeight: 'bold', fontSize: '16px' }}>
       {date}
     </div>
 
-    {/* Khung nội dung OTT */}
     {ott && (
       <div style={{ marginBottom: '20px', fontSize: '15px' }}>
         <span style={{ fontWeight: 'bold' }}>OTT:</span> {ott}
       </div>
     )}
 
-    {/* Khung nội dung Bản tin */}
     <div style={{ marginBottom: '120px', fontSize: '15px', minHeight: '200px' }}>
       <span style={{ fontWeight: 'bold', display: 'block', marginBottom: '10px' }}>Bản tin:</span>
       {children}
     </div>
 
-    {/* Phần ký tên và con dấu đè lên nhau (Đã sửa zIndex chuẩn JSX) */}
     <div style={{ position: 'relative', width: '300px', marginTop: '50px' }}>
       <div style={{ fontSize: '15px', marginBottom: '5px', paddingLeft: '35px' }}>Kind Regards,</div>
       
       <div style={{ position: 'relative', height: '130px' }}>
-        {/* 1. Ảnh chữ ký nằm DƯỚI */}
         <img src="../assets/ck.png" alt="Chữ ký" style={{ position: 'absolute', left: '45px', top: '25px', width: '150px', height: 'auto', zIndex: 1, pointerEvents: 'none' }} />
-
-        {/* 2. Ảnh con dấu nằm TRÊN đè lên chữ ký */}
         <img src="../content/posts/cd1.png" alt="Con dấu" style={{ position: 'absolute', left: '10px', top: '5px', width: '125px', height: 'auto', zIndex: 2, pointerEvents: 'none', mixBlendMode: 'multiply' }} />
       </div>
 
-      {/* Tên người ký */}
       <div style={{ fontWeight: 'bold', fontSize: '15px', marginTop: '5px', paddingLeft: '35px', position: 'relative', zIndex: 3 }}>
         Trần Định Long
       </div>
@@ -66,3 +57,9 @@ export const PostLayout = ({ children, ott, date = "9th July 2026" }) => (
 
   </div>
 );
+
+<PostLayout date="9th July 2026" ott="Nhập thông tin mã nội dung OTT vào đây">
+
+Điền nội dung bài viết dạng Markdown của bạn vào đây.
+
+</PostLayout>
