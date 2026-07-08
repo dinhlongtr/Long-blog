@@ -9,46 +9,60 @@ tags:
 description: Bạn có thể dùng mọi cách để giải
 ---
 
-export const CustomImage = ({ src, alt, width = '100%', radius = '0px' }) => (
-  <div style={{ textAlign: 'center', margin: '20px 0' }}>
-    <img 
-      src={src} 
-      alt={alt} 
-      style={{ 
-        width: width, 
-        height: 'auto', 
-        borderRadius: radius,
-        display: 'inline-block' 
-      }} 
-    />
-    {alt && <p style={{ fontSize: '14px', color: '#666', marginTop: '5px' }}>{alt}</p>}
+export const PostLayout = ({ children, ott, date = "9th July 2026" }) => (
+  <div style={{ fontFamily: 'Arial, sans-serif', maxWidth: '750px', margin: '0 auto', padding: '40px 20px', color: '#000', lineHeight: '1.6', backgroundColor: '#fff' }}>
+    
+    {/* Thanh thông tin liên hệ phía trên bên phải */}
+    <div style={{ textAlign: 'right', marginBottom: '50px', fontSize: '14px' }}>
+      <div style={{ marginBottom: '8px', display: 'inline-block', width: '100%' }}>
+        <span style={{ verticalAlign: 'middle' }}>+84 944928372</span>
+        <span style={{ display: 'inline-block', width: '20px', height: '20px', marginLeft: '8px', verticalAlign: 'middle', textAlign: 'center', border: '1.5px solid #000', borderRadius: '50%', fontSize: '11px', lineHeight: '18px' }}>📞</span>
+      </div>
+      <div style={{ marginBottom: '8px', display: 'inline-block', width: '100%' }}>
+        <span style={{ verticalAlign: 'middle' }}>dinhlongtr.hcmcyu@gmail.com</span>
+        <span style={{ display: 'inline-block', width: '20px', height: '20px', marginLeft: '8px', verticalAlign: 'middle', textAlign: 'center', border: '1.5px solid #000', borderRadius: '50%', fontSize: '11px', lineHeight: '18px' }}>✉</span>
+      </div>
+      <div style={{ display: 'inline-block', width: '100%' }}>
+        <span style={{ verticalAlign: 'middle' }}>trandinhlong.id.vn</span>
+        <span style={{ display: 'inline-block', width: '20px', height: '20px', marginLeft: '8px', verticalAlign: 'middle', textAlign: 'center', border: '1.5px solid #000', borderRadius: '50%', fontSize: '11px', lineHeight: '18px' }}>🌐</span>
+      </div>
+    </div>
+
+    {/* Ngày tháng */}
+    <div style={{ marginBottom: '35px', fontWeight: 'bold', fontSize: '16px' }}>
+      {date}
+    </div>
+
+    {/* Khung nội dung OTT */}
+    {ott && (
+      <div style={{ marginBottom: '20px', fontSize: '15px' }}>
+        <span style={{ fontWeight: 'bold' }}>OTT:</span> {ott}
+      </div>
+    )}
+
+    {/* Khung nội dung Bản tin */}
+    <div style={{ marginBottom: '120px', fontSize: '15px', minHeight: '200px' }}>
+      <span style={{ fontWeight: 'bold', display: 'block', marginBottom: '10px' }}>Bản tin:</span>
+      {children}
+    </div>
+
+    {/* Phần ký tên và con dấu đè lên nhau (Đã sửa zIndex chuẩn JSX) */}
+    <div style={{ position: 'relative', width: '300px', marginTop: '50px' }}>
+      <div style={{ fontSize: '15px', marginBottom: '5px', paddingLeft: '35px' }}>Kind Regards,</div>
+      
+      <div style={{ position: 'relative', height: '130px' }}>
+        {/* 1. Ảnh chữ ký nằm DƯỚI */}
+        <img src="../assets/ck.png" alt="Chữ ký" style={{ position: 'absolute', left: '45px', top: '25px', width: '150px', height: 'auto', zIndex: 1, pointerEvents: 'none' }} />
+
+        {/* 2. Ảnh con dấu nằm TRÊN đè lên chữ ký */}
+        <img src="../content/posts/cd1.png" alt="Con dấu" style={{ position: 'absolute', left: '10px', top: '5px', width: '125px', height: 'auto', zIndex: 2, pointerEvents: 'none', mixBlendMode: 'multiply' }} />
+      </div>
+
+      {/* Tên người ký */}
+      <div style={{ fontWeight: 'bold', fontSize: '15px', marginTop: '5px', paddingLeft: '35px', position: 'relative', zIndex: 3 }}>
+        Trần Định Long
+      </div>
+    </div>
+
   </div>
 );
-
-
-<div align=”center”>
-<p>AA 00005</p>
-<p>MẬT THƯ</p>
-<p>SECRET MAIL</pp>
-</div>
-
-> Trong quyển nhật ký tôi có kẹp chìa khóa, hãy lấy cái thứ 2 để mở cửa.
-
-Bản tin:
-```plaintext
-SV-QT-SV-MP-VY-MP-FI-DG-/-BE-AD-NQ-/-CF-BE-AD-UX-MP-FI-QT-/-KN-MP-MP-FI-/-AD-LO-/-RU-SV-XZ-DG-DG-MP-PS-/-RU-HK-LO-GJ-/-FI-CF-CF-HK-/-SV-PS-SV-MP-FI-/-AD-AD-AD-OR-RU-/-JM-2-6
-```
-
-Gợi ý: Không có vì quá đơn giản.  
-Chúc bạn thành công  
-```MRZ
-SM<<TRAN<DINH<LONG<<AA00005<<H<<<<<<<<<<<<<<
-<<260707<<<<M<<C<26<NW<<AR<<<<<<<<<<<<<<<<<<
-```
-[Tra cứu cách giải](https://script.google.com/macros/s/AKfycbzfpAkcdjJIteBZpAwpNUgiasKemT_X-MavkXXtIX2KWp6bTjEzLsauS-hQOmX7GvxNrg/exec)
-
-> Chú ý: Chỉ sử dụng link này để tìm cach1 giải cho mật thư này. Vì Những link cũ hơn có thể chưa cập nhật loại mật thư này.
-> Cách tra cứu: Copy đoạn MRZ-code vào Ô tra cứu và ấn Bắt đầu kiểm tra mã
-
-
-<CustomImage src="../content/posts/cd1.png" alt="cd" width="150px" radius="8px" />
