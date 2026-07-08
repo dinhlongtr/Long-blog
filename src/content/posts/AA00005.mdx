@@ -8,6 +8,24 @@ tags:
   - matthu
 description: Bạn có thể dùng mọi cách để giải
 ---
+
+export const CustomImage = ({ src, alt, width = '100%', radius = '0px' }) => (
+  <div style={{ textAlign: 'center', margin: '20px 0' }}>
+    <img 
+      src={src} 
+      alt={alt} 
+      style={{ 
+        width: width, 
+        height: 'auto', 
+        borderRadius: radius,
+        display: 'inline-block' 
+      }} 
+    />
+    {alt && <p style={{ fontSize: '14px', color: '#666', marginTop: '5px' }}>{alt}</p>}
+  </div>
+);
+
+
 <div align=”center”>
 <p>AA 00005</p>
 <p>MẬT THƯ</p>
@@ -32,15 +50,5 @@ SM<<TRAN<DINH<LONG<<AA00005<<H<<<<<<<<<<<<<<
 > Chú ý: Chỉ sử dụng link này để tìm cach1 giải cho mật thư này. Vì Những link cũ hơn có thể chưa cập nhật loại mật thư này.
 > Cách tra cứu: Copy đoạn MRZ-code vào Ô tra cứu và ấn Bắt đầu kiểm tra mã
 
-<div style="font-family: Arial, sans-serif; max-width: 750px; margin: 0 auto; padding: 40px 20px; color: #000; line-height: 1.6; background-color: #fff;">
-         <div style="position: relative; width: 300px; margin-top: 50px;">
-        <div style="font-size: 15px; margin-bottom: 5px; padding-left: 35px;">Kind Regards,</div>
-          <div style="position: relative; height: 130px;">
-          <img src="../content/posts/cd1.png" alt="Con dấu" style="position: absolute; left: 20px; top: 10px; width: 250px; height: auto; z-index: 2; pointer-events: none; mix-blend-mode: multiply;" />
-        </div>
-        <div style="font-weight: bold; font-size: 15px; margin-top: 5px; padding-left: 35px; position: relative; z-index: 3;">
-            Trần Đình Long
-        </div>
-    </div>
 
-</div>
+<CustomImage src="../content/posts/cd1.png" alt="cd" width="150px" radius="8px" />
