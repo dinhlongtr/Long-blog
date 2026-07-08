@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function LetterLayout({ children, frontmatter }) {
   // Đảm bảo dữ liệu không bị lỗi nếu frontmatter trống
   const date = frontmatter?.date || "9th July 2026";
