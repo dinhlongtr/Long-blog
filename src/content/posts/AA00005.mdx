@@ -9,57 +9,14 @@ tags:
 description: Bạn có thể dùng mọi cách để giải
 ---
 
-export const PostLayout = ({ children, ott, date = "9th July 2026" }) => (
-  <div style={{ fontFamily: 'Arial, sans-serif', maxWidth: '750px', margin: '0 auto', padding: '40px 20px', color: '#000', lineHeight: '1.6', backgroundColor: '#fff' }}>
-    
-    <div style={{ textAlign: 'right', marginBottom: '50px', fontSize: '14px' }}>
-      <div style={{ marginBottom: '8px', display: 'inline-block', width: '100%' }}>
-        <span style={{ verticalAlign: 'middle' }}>+84 944928372</span>
-        <span style={{ display: 'inline-block', width: '20px', height: '20px', marginLeft: '8px', verticalAlign: 'middle', textAlign: 'center', border: '1.5px solid #000', borderRadius: '50%', fontSize: '11px', lineHeight: '18px' }}>📞</span>
-      </div>
-      <div style={{ marginBottom: '8px', display: 'inline-block', width: '100%' }}>
-        <span style={{ verticalAlign: 'middle' }}>dinhlongtr.hcmcyu@gmail.com</span>
-        <span style={{ display: 'inline-block', width: '20px', height: '20px', marginLeft: '8px', verticalAlign: 'middle', textAlign: 'center', border: '1.5px solid #000', borderRadius: '50%', fontSize: '11px', lineHeight: '18px' }}>✉</span>
-      </div>
-      <div style={{ display: 'inline-block', width: '100%' }}>
-        <span style={{ verticalAlign: 'middle' }}>trandinhlong.id.vn</span>
-        <span style={{ display: 'inline-block', width: '20px', height: '20px', marginLeft: '8px', verticalAlign: 'middle', textAlign: 'center', border: '1.5px solid #000', borderRadius: '50%', fontSize: '11px', lineHeight: '18px' }}>🌐</span>
-      </div>
-    </div>
+import LetterLayout from '../../components/LetterLayout.jsx'
 
-    <div style={{ marginBottom: '35px', fontWeight: 'bold', fontSize: '16px' }}>
-      {date}
-    </div>
+<LetterLayout frontmatter={frontmatter}>
 
-    {ott && (
-      <div style={{ marginBottom: '20px', fontSize: '15px' }}>
-        <span style={{ fontWeight: 'bold' }}>OTT:</span> {ott}
-      </div>
-    )}
+Đây là nội dung bản tin viết bằng **Markdown hoàn toàn**. Bạn thoải mái gõ chữ mà không sợ vướng víu code HTML nữa:
 
-    <div style={{ marginBottom: '120px', fontSize: '15px', minHeight: '200px' }}>
-      <span style={{ fontWeight: 'bold', display: 'block', marginBottom: '10px' }}>Bản tin:</span>
-      {children}
-    </div>
+* Dễ dàng tạo danh sách gạch đầu dòng.
+* Thêm liên kết hoặc chữ in đậm tùy ý.
+* Khi hiển thị lên web tĩnh, Vercel sẽ tự động render phần này thành văn bản nằm gọn bên trong tờ giấy trắng.
 
-    <div style={{ position: 'relative', width: '300px', marginTop: '50px' }}>
-      <div style={{ fontSize: '15px', marginBottom: '5px', paddingLeft: '35px' }}>Kind Regards,</div>
-      
-      <div style={{ position: 'relative', height: '130px' }}>
-        <img src="../assets/ck.png" alt="Chữ ký" style={{ position: 'absolute', left: '45px', top: '25px', width: '150px', height: 'auto', zIndex: 1, pointerEvents: 'none' }} />
-        <img src="../content/posts/cd1.png" alt="Con dấu" style={{ position: 'absolute', left: '10px', top: '5px', width: '125px', height: 'auto', zIndex: 2, pointerEvents: 'none', mixBlendMode: 'multiply' }} />
-      </div>
-
-      <div style={{ fontWeight: 'bold', fontSize: '15px', marginTop: '5px', paddingLeft: '35px', position: 'relative', zIndex: 3 }}>
-        Trần Định Long
-      </div>
-    </div>
-
-  </div>
-);
-
-<PostLayout date="9th July 2026" ott="Nhập thông tin mã nội dung OTT vào đây">
-
-Điền nội dung bài viết dạng Markdown của bạn vào đây.
-
-</PostLayout>
+</LetterLayout>
